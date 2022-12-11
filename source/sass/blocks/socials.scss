@@ -1,0 +1,19 @@
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 27px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: $tablet-max-width) {
+  .socials {
+    gap: 22px;
+  }
+
+  .socials__link svg {
+    width: 16px;
+    height: 16px;
+  }
+}
