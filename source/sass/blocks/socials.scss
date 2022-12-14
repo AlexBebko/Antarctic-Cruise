@@ -7,8 +7,33 @@
   list-style: none;
 }
 
+.socials__link {
+  fill: $color-alice-blue;
+  box-shadow: 0 0 40px 40px $color-tangaroa inset, 0 0 0 0 $color-tangaroa;
+}
+
+.socials__link:focus,
+.socials__link:focus-within {
+  outline: none;
+}
+
+.socials__link:hover svg,
+.socials__link:focus svg,
+.socials__link:focus-within svg {
+  outline: none;
+  background-color: $color-alice-blue;
+  fill: $color-tangaroa;
+  box-shadow: 0 0 1px 0 $color-alice-blue inset, 0 0 1px 4px $color-alice-blue;
+}
+
+.socials__link:active svg {
+  background-color: $color-pattens-blue-active;
+  box-shadow: 0 0 1px 0 $color-pattens-blue-active inset, 0 0 1px 4px $color-pattens-blue-active;
+}
+
 @media (max-width: $tablet-max-width) {
   .socials {
+    margin-left: -5px;
     gap: 22px;
   }
 

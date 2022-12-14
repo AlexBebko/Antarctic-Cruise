@@ -809,7 +809,11 @@ button,
   justify-content: space-between;
 }
 
-.main-nav__toggle {
+.main-header__logo {
+  fill: #f9fbfd;
+}
+
+.main-header__toggle {
   display: none;
 }
 
@@ -1111,13 +1115,18 @@ button,
   padding: 30px 25px 22px 25px;
 }
 
-.catalog__item:hover {
+.catalog__item:hover,
+.catalog__item:focus,
+.catalog__item:focus-within {
   display: block;
   overflow: scroll;
   scrollbar-width: none;
+  outline: none;
 }
 
-.catalog__item:hover::-webkit-scrollbar {
+.catalog__item:hover::-webkit-scrollbar,
+.catalog__item:focus::-webkit-scrollbar,
+.catalog__item:focus-within::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
@@ -1131,7 +1140,9 @@ button,
   color: #f9fbfd;
 }
 
-.catalog__item:hover h3 {
+.catalog__item:hover h3,
+.catalog__item:focus h3,
+.catalog__item:focus-within h3 {
   padding-left: 0;
   margin-bottom: 13px;
 }
@@ -1166,7 +1177,9 @@ button,
   display: none;
 }
 
-.catalog__item:hover div {
+.catalog__item:hover div,
+.catalog__item:focus div,
+.catalog__item:focus-within div {
   display: block;
   padding: 0;
   margin: 0;
@@ -1183,9 +1196,29 @@ button,
   font-size: 14px;
   line-height: 150%;
   color: #011c40;
+  -webkit-box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
+  box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.catalog__item.cruise:hover {
+.catalog__item a:hover,
+.catalog__item a:focus {
+  outline: 0;
+  background-color: #011c40;
+  color: #f9fbfd;
+  -webkit-box-shadow: 0 0 7px 0 #f9fbfd inset, 0 0 7px 4px #f9fbfd;
+  box-shadow: 0 0 7px 0 #f9fbfd inset, 0 0 7px 4px #f9fbfd;
+}
+
+.catalog__item a:active {
+  opacity: 0.7;
+}
+
+.catalog__item.cruise:hover,
+.catalog__item.cruise:focus,
+.catalog__item.cruise:focus-within {
   background-image: none;
 }
 
@@ -1263,6 +1296,360 @@ button,
   background-image: url("../img/minion-1.webp");
 }
 
+.booking {
+  background-color: #c6dff6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.webp .booking {
+  background-image: url("../img/booking-background.webp");
+}
+
+.no-webp .booking {
+  background-image: url("../img/booking-background.jpg");
+}
+
+.booking__wrapper {
+  width: 100%;
+  min-height: 555px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.booking__description-container {
+  padding-top: 163px;
+}
+
+.booking__title {
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.booking__description {
+  margin: 0;
+  max-width: 352px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.form {
+  width: 403px;
+  height: 455px;
+  padding: 50px;
+  padding-top: 43px;
+  background-color: #011c40;
+}
+
+.form__info {
+  margin: 0;
+  margin-bottom: 27px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.form__field label {
+  display: none;
+}
+
+.form__field input {
+  width: 100%;
+  height: 43px;
+  margin-bottom: 20px;
+  padding-left: 14px;
+  background-color: #f9fbfd;
+  color: #011c40;
+  border: none;
+}
+
+.form__field input::-webkit-input-placeholder {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-moz-placeholder {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input:-ms-input-placeholder {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-ms-input-placeholder {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::placeholder {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input:hover,
+.form__field input:focus,
+.form__field input:focus-within {
+  outline: #011c40 solid 2px;
+  -webkit-box-shadow: 0 0 7px 0 #f9fbfd inset, 0 0 7px 4px #f9fbfd;
+  box-shadow: 0 0 7px 0 #f9fbfd inset, 0 0 7px 4px #f9fbfd;
+}
+
+.form__field-checkbox {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 23px;
+}
+
+.form__field-checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.form__field-checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+  cursor: pointer;
+}
+
+.form__field-checkbox label {
+  vertical-align: text-top;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #f9fbfd;
+  cursor: pointer;
+}
+
+.form__field-checkbox:hover label,
+.form__field-checkbox:hover span {
+  -webkit-filter: drop-shadow(0 0 1px #d8d8d9);
+  filter: drop-shadow(0 0 1px #d8d8d9);
+}
+
+.form__field-checkbox:focus label,
+.form__field-checkbox:focus-within label {
+  -webkit-filter: drop-shadow(0 0 1px #d8d8d9);
+  filter: drop-shadow(0 0 1px #d8d8d9);
+}
+
+.form__field-checkbox:focus span,
+.form__field-checkbox:focus-within span {
+  -webkit-filter: drop-shadow(0 0 1px #d8d8d9);
+  filter: drop-shadow(0 0 1px #d8d8d9);
+}
+
+.form__field-checkbox:active label,
+.form__field-checkbox:active span {
+  opacity: 0.5;
+}
+
+input[type=checkbox]:checked + span::before,
+input[type=checkbox]:checked + span::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 8px;
+  background: url("../img/svg/check.svg");
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.form button {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  background-color: #f9fbfd;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011c40;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
+  box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.form button:hover,
+.form button:focus {
+  outline: 0;
+  background-color: #011c40;
+  color: #f9fbfd;
+  -webkit-box-shadow: 0 0 7px 0 #f9fbfd inset, 0 0 7px 4px #f9fbfd;
+  box-shadow: 0 0 7px 0 #f9fbfd inset, 0 0 7px 4px #f9fbfd;
+}
+
+.form button:active {
+  opacity: 0.7;
+}
+
+.contacts__wrapper {
+  min-height: 530px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 119px;
+}
+
+.contacts__map {
+  margin-right: 100px;
+}
+
+.contacts__map.no-js {
+  background-image: url("../img/map.png");
+  background-size: 560px 306px;
+  background-repeat: no-repeat;
+  min-width: 560px;
+}
+
+.contacts__map.no-js iframe {
+  display: none;
+}
+
+.contacts__map iframe {
+  display: block;
+}
+
+.contacts__details {
+  max-width: 500px;
+  padding-top: 20px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.contacts__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contacts__item span {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding-left: 6px;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.contacts__link {
+  min-width: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.contacts__link svg {
+  min-width: 22px;
+  fill: #011c40;
+}
+
+.contacts__link:focus,
+.contacts__link:focus-within {
+  outline: none;
+}
+
+.contacts__link span {
+  color: #011c40;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contacts__link:hover svg,
+.contacts__link:focus svg,
+.contacts__link:focus-within svg {
+  fill: #0b5394;
+}
+
+.contacts__link:hover span,
+.contacts__link:focus span,
+.contacts__link:focus-within span {
+  outline: none;
+  color: #0b5394;
+}
+
+.contacts__link:active svg {
+  fill: rgba(1, 28, 64, 0.7);
+}
+
+.contacts__link:active span {
+  color: rgba(1, 28, 64, 0.7);
+}
+
 .main-footer {
   background-color: #011c40;
 }
@@ -1316,6 +1703,50 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: #f9fbfd;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c6dff6), color-stop(50%, #c6dff6), color-stop(50%, #f9fbfd));
+  background-image: -o-linear-gradient(left, #c6dff6, #c6dff6 50%, #f9fbfd 50%);
+  background-image: linear-gradient(to right, #c6dff6, #c6dff6 50%, #f9fbfd 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-footer__nav-link::before {
+  content: "";
+  background: #c6dff6;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-footer__nav-link:hover,
+.main-footer__nav-link:focus {
+  background-position: 0;
+  outline: none;
+}
+
+.main-footer__nav-link:hover::before,
+.main-footer__nav-link:focus::before {
+  width: 100%;
+}
+
+.main-footer__nav-link:active,
+.main-footer__nav-link:active::before {
+  opacity: 0.7;
 }
 
 .socials {
@@ -1329,6 +1760,33 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.socials__link {
+  fill: #f9fbfd;
+  -webkit-box-shadow: 0 0 40px 40px #011c40 inset, 0 0 0 0 #011c40;
+  box-shadow: 0 0 40px 40px #011c40 inset, 0 0 0 0 #011c40;
+}
+
+.socials__link:focus,
+.socials__link:focus-within {
+  outline: none;
+}
+
+.socials__link:hover svg,
+.socials__link:focus svg,
+.socials__link:focus-within svg {
+  outline: none;
+  background-color: #f9fbfd;
+  fill: #011c40;
+  -webkit-box-shadow: 0 0 1px 0 #f9fbfd inset, 0 0 1px 4px #f9fbfd;
+  box-shadow: 0 0 1px 0 #f9fbfd inset, 0 0 1px 4px #f9fbfd;
+}
+
+.socials__link:active svg {
+  background-color: rgba(198, 223, 246, 0.3);
+  -webkit-box-shadow: 0 0 1px 0 rgba(198, 223, 246, 0.3) inset, 0 0 1px 4px rgba(198, 223, 246, 0.3);
+  box-shadow: 0 0 1px 0 rgba(198, 223, 246, 0.3) inset, 0 0 1px 4px rgba(198, 223, 246, 0.3);
 }
 
 /* @mixin hover-focus {
@@ -1452,6 +1910,14 @@ button,
   .webp .cruise--minion {
     background-image: url("../img/minion-1@2x.webp");
   }
+
+  .webp .booking {
+    background-image: url("../img/booking-background@2x.webp");
+  }
+
+  .no-webp .booking {
+    background-image: url("../img/booking-background@2x.jpg");
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1463,7 +1929,7 @@ button,
     margin-top: 28px;
   }
 
-  .main-header__logo {
+  .main-header__logo svg {
     margin-top: 2px;
     width: 38px;
     height: 20px;
@@ -1597,7 +2063,8 @@ button,
   }
 
   .catalog__wrapper {
-    padding-top: 88px;
+    padding-top: 89px;
+    padding-bottom: 100px;
   }
 
   .catalog__list {
@@ -1694,6 +2161,82 @@ button,
     background-image: url("../img/minion-1-tablet.webp");
   }
 
+  .webp .booking {
+    background-image: url("../img/booking-background-tablet.webp");
+  }
+
+  .no-webp .booking {
+    background-image: url("../img/booking-background-tablet.jpg");
+  }
+
+  .booking__wrapper {
+    min-height: 805px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 88px;
+  }
+
+  .booking__description-container {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .booking__title {
+    margin-bottom: 5px;
+    font-size: 34px;
+  }
+
+  .booking__description {
+    margin-left: 34px;
+    margin-bottom: 54px;
+  }
+
+  .contacts__wrapper {
+    min-height: 535px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .contacts__map {
+    margin-right: 30px;
+  }
+
+  .contacts__map.no-js {
+    min-width: 324px;
+    background-image: url("../img/map-tablet.png");
+    background-size: 324px 335px;
+    background-repeat: no-repeat;
+  }
+
+  .contacts__map iframe {
+    width: 324px;
+    height: 335px;
+  }
+
+  .contacts__details {
+    -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+    padding-top: 66px;
+  }
+
+  .contacts__item span {
+    margin-top: -4px;
+  }
+
+  .main-footer__wrapper {
+    padding-top: 48px;
+    padding-bottom: 46px;
+  }
+
   .main-footer__logo img {
     width: 38px;
     height: 20px;
@@ -1717,6 +2260,7 @@ button,
   }
 
   .socials {
+    margin-left: -5px;
     gap: 22px;
   }
 
@@ -1828,38 +2372,79 @@ button,
   }
 
   .main-header {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
-  .main-header__wrapper.is-closed .main-header__logo {
-    margin-top: 0;
-    width: 42px;
-    height: 22px;
+  .no-js .main-header {
+    position: static;
+  }
+
+  .main-header__wrapper {
+    padding-top: 20px;
+  }
+
+  .main-header__wrapper.is-opened,
+  .no-js .main-header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 30px;
+    margin-left: 35px;
+    background-color: #f9fbfd;
+    color: #011c40;
+    -webkit-box-shadow: -35px 0 0 rgba(0, 43, 102, 0.5);
+    box-shadow: -35px 0 0 rgba(0, 43, 102, 0.5);
+  }
+
+  .no-js .main-header__wrapper {
+    margin-left: 0;
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
+
+  .main-header__logo {
+    margin-bottom: 27px;
+  }
+
+  .no-js .main-header__wrapper .main-header__logo {
+    fill: #011c40;
   }
 
   .main-header__wrapper.is-opened .main-header__logo {
-    margin-top: 0;
+    fill: #011c40;
   }
 
-  .main-nav {
-    position: relative;
-  }
-
-  .main-nav__toggle {
+  .main-header__toggle {
     position: absolute;
-    top: 4px;
-    right: -1px;
+    top: 24px;
+    right: 15px;
     z-index: 2;
     display: block;
     width: 24px;
-    min-height: 14px;
+    height: 14px;
     padding: 0;
     background-color: rgba(255, 255, 255, 0);
     cursor: pointer;
     border: none;
   }
 
-  .main-nav.is-closed .main-nav__toggle::before {
+  .main-header__wrapper.is-closed .main-header__toggle::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1871,22 +2456,21 @@ button,
     box-shadow: 0 6px 0 0 #ffffff, 0 12px 0 0 #ffffff;
   }
 
-  .main-nav__list {
-    display: none;
+  .main-header__wrapper.is-opened .main-header__toggle {
+    top: 23px;
+    right: 19px;
   }
 
-  .main-nav.is-opened .main-nav__toggle::before,
-  .main-nav.is-opened .main-nav__toggle::after {
+  .main-header__wrapper.is-opened .main-header__toggle::before,
+  .main-header__wrapper.is-opened .main-header__toggle::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 13px;
+    width: 18px;
     height: 2px;
     background-color: #000000;
   }
 
-  .main-nav.is-opened .main-nav__toggle::before {
+  .main-header__wrapper.is-opened .main-header__toggle::before {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -1894,10 +2478,60 @@ button,
     box-shadow: none;
   }
 
-  .main-nav.is-opened .main-nav__toggle::after {
+  .main-header__wrapper.is-opened .main-header__toggle::after {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
+  }
+
+  .main-header__wrapper.is-closed .main-header__nav {
+    display: none;
+  }
+
+  .main-header__wrapper.is-opened .main-header__nav {
+    display: block;
+  }
+
+  .main-nav__list {
+    padding-left: 0;
+  }
+
+  .main-nav__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .main-nav__link {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #011c40;
+  }
+
+  .main-nav__link:focus,
+  .main-nav__link:focus-within {
+    color: #344966;
+  }
+
+  .main-nav__link:focus::after,
+  .main-nav__link:focus-within::after {
+    background-color: #344966;
+  }
+
+  .main-nav__link:active {
+    color: rgba(1, 28, 64, 0.5);
+  }
+
+  .main-nav__link:active::after {
+    background-color: rgba(1, 28, 64, 0.5);
   }
 
   .intro {
@@ -2015,7 +2649,8 @@ button,
   .catalog__wrapper {
     padding-left: 9px;
     padding-right: 9px;
-    padding-top: 57px;
+    padding-top: 56px;
+    padding-bottom: 65px;
   }
 
   .catalog__title {
@@ -2045,35 +2680,51 @@ button,
   }
 
   .no-webp .cruise--astoria {
-    background-image: url("../img/astoria-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/astoria-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile.jpg");
   }
 
   .no-webp .cruise--elaine {
-    background-image: url("../img/elaine-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/elaine-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile.jpg");
   }
 
   .no-webp .cruise--atlantis {
-    background-image: url("../img/atlantis-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/atlantis-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile.jpg");
   }
 
   .no-webp .cruise--odyssey {
-    background-image: url("../img/odyssey-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/odyssey-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile.jpg");
   }
 
   .no-webp .cruise--olimpia {
-    background-image: url("../img/olimpia-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/olimpia-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile.jpg");
   }
 
   .no-webp .cruise--aurora {
-    background-image: url("../img/aurora-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/aurora-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile.jpg");
   }
 
   .no-webp .cruise--leonor {
-    background-image: url("../img/leonor-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/leonor-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile.jpg");
   }
 
   .no-webp .cruise--minion {
-    background-image: url("../img/minion-1-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/minion-1-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile.jpg");
   }
 
   .webp .cruise {
@@ -2082,35 +2733,138 @@ button,
   }
 
   .webp .cruise--astoria {
-    background-image: url("../img/astoria-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/astoria-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile.webp");
   }
 
   .webp .cruise--elaine {
-    background-image: url("../img/elaine-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/elaine-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile.webp");
   }
 
   .webp .cruise--atlantis {
-    background-image: url("../img/atlantis-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/atlantis-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile.webp");
   }
 
   .webp .cruise--odyssey {
-    background-image: url("../img/odyssey-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/odyssey-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile.webp");
   }
 
   .webp .cruise--olimpia {
-    background-image: url("../img/olimpia-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/olimpia-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile.webp");
   }
 
   .webp .cruise--aurora {
-    background-image: url("../img/aurora-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/aurora-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile.webp");
   }
 
   .webp .cruise--leonor {
-    background-image: url("../img/leonor-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/leonor-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile.webp");
   }
 
   .webp .cruise--minion {
-    background-image: url("../img/minion-1-mobile.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/minion-1-mobile.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile.webp");
+  }
+
+  .webp .booking {
+    background-image: url("../img/booking-background-mobile.webp");
+  }
+
+  .no-webp .booking {
+    background-image: url("../img/booking-background-mobile.jpg");
+  }
+
+  .booking__wrapper {
+    width: 90%;
+    min-height: 760px;
+    padding-top: 58px;
+  }
+
+  .booking__title {
+    margin-bottom: 13px;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .booking__description {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 33px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .form {
+    width: 100%;
+    height: 460px;
+    padding: 40px 29px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  .form__info {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .form__field-checkbox {
+    padding-left: 28px;
+    margin-bottom: 28px;
+    width: 180px;
+  }
+
+  .form__field-checkbox label {
+    display: block;
+    line-height: 110%;
+  }
+
+  .contacts__wrapper {
+    min-height: 702px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding-top: 57px;
+    padding-bottom: 65px;
+  }
+
+  .contacts__map.no-js {
+    min-width: 290px;
+    min-height: 316px;
+    background-image: url("../img/map-mobile.png");
+    background-size: 290px 316px;
+    background-repeat: no-repeat;
+    margin-right: 0;
+  }
+
+  .contacts__map iframe {
+    max-width: 290px;
+    margin: 0 auto;
+    height: 316px;
+  }
+
+  .contacts__details {
+    padding-top: 0;
+    padding-bottom: 16px;
   }
 
   .main-footer__wrapper {
@@ -2122,7 +2876,7 @@ button,
     -ms-flex-align: start;
     align-items: flex-start;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 33px;
   }
 
   .main-footer__nav-wrapper {
@@ -2142,7 +2896,7 @@ button,
 
   .main-footer__nav-item {
     margin-right: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .main-footer__nav-item:last-child {
@@ -2181,67 +2935,119 @@ button,
   }
 
   .no-webp .cruise--astoria {
-    background-image: url("../img/astoria-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/astoria-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile@2x.jpg");
   }
 
   .no-webp .cruise--elaine {
-    background-image: url("../img/elaine-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/elaine-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile@2x.jpg");
   }
 
   .no-webp .cruise--atlantis {
-    background-image: url("../img/atlantis-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/atlantis-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile@2x.jpg");
   }
 
   .no-webp .cruise--odyssey {
-    background-image: url("../img/odyssey-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/odyssey-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile@2x.jpg");
   }
 
   .no-webp .cruise--olimpia {
-    background-image: url("../img/olimpia-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/olimpia-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile@2x.jpg");
   }
 
   .no-webp .cruise--aurora {
-    background-image: url("../img/aurora-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/aurora-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile@2x.jpg");
   }
 
   .no-webp .cruise--leonor {
-    background-image: url("../img/leonor-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/leonor-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile@2x.jpg");
   }
 
   .no-webp .cruise--minion {
-    background-image: url("../img/minion-1-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/minion-1-mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile@2x.jpg");
   }
 
   .webp .cruise--astoria {
-    background-image: url("../img/astoria-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/astoria-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/astoria-mobile@2x.webp");
   }
 
   .webp .cruise--elaine {
-    background-image: url("../img/elaine-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/elaine-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/elaine-mobile@2x.webp");
   }
 
   .webp .cruise--atlantis {
-    background-image: url("../img/atlantis-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/atlantis-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/atlantis-mobile@2x.webp");
   }
 
   .webp .cruise--odyssey {
-    background-image: url("../img/odyssey-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/odyssey-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/odyssey-mobile@2x.webp");
   }
 
   .webp .cruise--olimpia {
-    background-image: url("../img/olimpia-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/olimpia-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/olimpia-mobile@2x.webp");
   }
 
   .webp .cruise--aurora {
-    background-image: url("../img/aurora-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/aurora-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/aurora-mobile@2x.webp");
   }
 
   .webp .cruise--leonor {
-    background-image: url("../img/leonor-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/leonor-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/leonor-mobile@2x.webp");
   }
 
   .webp .cruise--minion {
-    background-image: url("../img/minion-1-mobile@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/minion-1-mobile@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile@2x.webp");
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile@2x.webp");
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1024px), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2) and (min-width: 1024px), (max-width: 1023px) and (min-resolution: 1.5dppx) and (min-width: 1024px) {
+  .webp .booking {
+    background-image: url("../img/booking-background-tablet@2x.webp");
+  }
+
+  .no-webp .booking {
+    background-image: url("../img/booking-background-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1024px), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2) and (min-width: 1024px), (max-width: 767px) and (min-resolution: 1.5dppx) and (min-width: 1024px) {
+  .webp .booking {
+    background-image: url("../img/booking-background-mobile@2x.webp");
+  }
+
+  .no-webp .booking {
+    background-image: url("../img/booking-background-mobile@2x.jpg");
   }
 }
 

@@ -282,66 +282,82 @@
     background-size: cover;
 
     &--astoria {
-      background-image: url("../img/astoria-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/astoria-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/astoria-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/astoria-mobile@2x.jpg");
       }
     }
 
     &--elaine {
-      background-image: url("../img/elaine-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/elaine-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/elaine-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/elaine-mobile@2x.jpg");
       }
     }
 
     &--atlantis {
-      background-image: url("../img/atlantis-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/atlantis-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/atlantis-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/atlantis-mobile@2x.jpg");
       }
     }
 
     &--odyssey {
-      background-image: url("../img/odyssey-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/odyssey-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/odyssey-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/odyssey-mobile@2x.jpg");
       }
     }
 
     &--olimpia {
-      background-image: url("../img/olimpia-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/olimpia-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/olimpia-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/olimpia-mobile@2x.jpg");
       }
     }
 
     &--aurora {
-      background-image: url("../img/aurora-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/aurora-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/aurora-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/aurora-mobile@2x.jpg");
       }
     }
 
     &--leonor {
-      background-image: url("../img/leonor-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/leonor-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/leonor-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/leonor-mobile@2x.jpg");
       }
     }
 
     &--minion {
-      background-image: url("../img/minion-1-mobile.jpg");
+      background-image: $tangaroa-to-up,
+        url("../img/minion-1-mobile.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/minion-1-mobile@2x.jpg");
+        background-image: $tangaroa-to-up,
+          url("../img/minion-1-mobile@2x.jpg");
       }
     }
   }
@@ -351,66 +367,82 @@
     background-size: cover;
 
     &--astoria {
-      background-image: url("../img/astoria-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/astoria-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/astoria-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/astoria-mobile@2x.webp");
       }
     }
 
     &--elaine {
-      background-image: url("../img/elaine-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/elaine-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/elaine-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/elaine-mobile@2x.webp");
       }
     }
 
     &--atlantis {
-      background-image: url("../img/atlantis-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/atlantis-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/atlantis-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/atlantis-mobile@2x.webp");
       }
     }
 
     &--odyssey {
-      background-image: url("../img/odyssey-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/odyssey-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/odyssey-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/odyssey-mobile@2x.webp");
       }
     }
 
     &--olimpia {
-      background-image: url("../img/olimpia-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/olimpia-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/olimpia-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/olimpia-mobile@2x.webp");
       }
     }
 
     &--aurora {
-      background-image: url("../img/aurora-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/aurora-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/aurora-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/aurora-mobile@2x.webp");
       }
     }
 
     &--leonor {
-      background-image: url("../img/leonor-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/leonor-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/leonor-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/leonor-mobile@2x.webp");
       }
     }
 
     &--minion {
-      background-image: url("../img/minion-1-mobile.webp");
+      background-image: $tangaroa-to-up,
+        url("../img/minion-1-mobile.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/minion-1-mobile@2x.webp");
+        background-image: $tangaroa-to-up,
+          url("../img/minion-1-mobile@2x.webp");
       }
     }
   }

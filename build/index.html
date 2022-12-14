@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page no-webp" lang="ru">
+<html class="page no-webp no-js" lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,14 +18,16 @@
         <div class="main-header__wrapper container">
 
           <a class="main-header__logo">
-            <img src="img/svg/logo.svg" width="70" height="38" alt="Логотип компании - Круизы в Антарктиду">
+            <svg width="70" height="38">
+              <use href="img/sprite/sprite.svg#logo"></use>
+            </svg>
           </a>
 
-          <nav class="main-header__nav main-nav is-closed">
+          <button class="main-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
 
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
+          <nav class="main-header__nav main-nav">
 
             <ul class="main-nav__list">
 
@@ -167,7 +169,7 @@
 
             <ul class="catalog__list">
 
-              <li class="catalog__item cruise cruise--astoria">
+              <li class="catalog__item cruise cruise--astoria" tabindex="0">
                 <h3>
                   Круиз "Астория"
                 </h3>
@@ -210,7 +212,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--elaine">
+              <li class="catalog__item cruise cruise--elaine" tabindex="0">
                 <h3>
                   Круиз "Элайн"
                 </h3>
@@ -253,7 +255,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--atlantis">
+              <li class="catalog__item cruise cruise--atlantis" tabindex="0">
                 <h3>
                   Круиз "Атлантис"
                 </h3>
@@ -296,7 +298,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--odyssey">
+              <li class="catalog__item cruise cruise--odyssey" tabindex="0">
                 <h3>
                   Круиз "Одиссей"
                 </h3>
@@ -339,7 +341,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--olimpia">
+              <li class="catalog__item cruise cruise--olimpia" tabindex="0">
                 <h3>
                   Круиз "Олимпия"
                 </h3>
@@ -381,7 +383,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--aurora">
+              <li class="catalog__item cruise cruise--aurora" tabindex="0">
                 <h3>
                   Круиз "Аврора"
                 </h3>
@@ -424,7 +426,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--leonor">
+              <li class="catalog__item cruise cruise--leonor" tabindex="0">
                 <h3>
                   Круиз "Леонор"
                 </h3>
@@ -467,7 +469,7 @@
                 </div>
               </li>
 
-              <li class="catalog__item cruise cruise--minion">
+              <li class="catalog__item cruise cruise--minion" tabindex="0">
                 <h3>
                   Круиз "Минион - 1"
                 </h3>
@@ -522,16 +524,15 @@
               </h2>
 
               <p class="booking__description">
-                Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%
+                Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
               </p>
 
             </div>
 
             <form class="booking__form form" action="https://echo.htmlacademy.ru/" method="post">
-              <div class="form__wrapper">
 
                 <p class="form__info">
-                  Оставьте заявку и мы свяжемся с вами в ближайшее время
+                  Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
                 </p>
 
                 <div class="form__field form__field--name">
@@ -559,13 +560,12 @@
                   <input type="checkbox" name="user-agreement" id="user-agreement" value="agreement" required checked>
                   <span></span>
                   <label for="user-agreement">
-                    Я согласен на обработку персональных данных
+                    Я согласен на обработку моих&nbsp;персональных данных
                   </label>
                 </div>
 
                 <button type="submit">Оставить заявку</button>
 
-              </div>
             </form>
           </div>
         </section>
@@ -575,34 +575,38 @@
             <h2 class="visually-hidden">
               Контактные данные компании
             </h2>
-            <div class="contacts__map map">
-
+            <div class="contacts__map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A390a9d4e4e3313e935f0202c80c43444c2e7f68bf36d6aa6fe0e1e26c33090a6&amp;source=constructor" width="560" height="306" frameborder="0"></iframe>
             </div>
             <div class="contacts__details">
 
               <p class="contacts__title">
-                У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.
+                У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и мы вам все расскажем.
               </p>
 
-              <ul class="contacts_list">
+              <ul class="contacts__list">
 
                 <li class="contacts__item contacts__item--address">
-                  <svg width="18" height="22">
-                    <use href="img/sprite/sprite.svg#marker"></use>
-                  </svg>
 
-                  <span class="contacts__text">
-                    г. Санкт Петербург, ул. Большая Конюшенная, 19/8
-                  </span>
+                  <a class="contacts__link" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323196%2C59.938600&z=17.93">
+                    <svg width="18" height="22">
+                      <use href="img/sprite/sprite.svg#marker"></use>
+                    </svg>
+                    <span>
+                      г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8
+                    </span>
+                  </a>
                 </li>
 
                 <li class="contacts__item contacts__item--address">
-                  <svg width="18" height="18">
-                    <use href="img/sprite/sprite.svg#phone"></use>
-                  </svg>
 
-                  <a class="contacts__text" href="tel:88002000000">
-                    8-800-200-00-00
+                  <a class="contacts__link" href="tel:88002000000">
+                    <svg width="18" height="18">
+                      <use href="img/sprite/sprite.svg#phone"></use>
+                    </svg>
+                    <span>
+                      8-800-200-00-00
+                    </span>
                   </a>
                 </li>
               </ul>
