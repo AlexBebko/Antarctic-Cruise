@@ -45,9 +45,11 @@
     $color-pattens-blue 50%,
     $color-alice-blue 50%
   );
+  user-select: none;
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
+  vertical-align: auto;
   padding: 5px 0;
   position: relative;
   background-clip: text;

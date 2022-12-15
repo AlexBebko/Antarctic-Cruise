@@ -85,6 +85,7 @@
   line-height: 130%;
   color: $color-alice-blue;
   cursor: pointer;
+  user-select: none;
 }
 
 .form__field-checkbox:hover label,
@@ -135,6 +136,7 @@ input[type="checkbox"]:checked + span {
   cursor: pointer;
   box-shadow: 0 0 40px 40px $color-alice-blue inset, 0 0 0 0 $color-alice-blue;
   transition: all 0.2s;
+  user-select: none;
 }
 
 .form button:hover,

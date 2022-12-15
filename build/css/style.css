@@ -848,6 +848,10 @@ button,
   line-height: 20px;
   color: #f9fbfd;
   padding-bottom: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-nav__link::after {
@@ -954,6 +958,7 @@ button,
 
 .about__text-wrapper {
   display: inline-block;
+  vertical-align: middle;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -1201,6 +1206,10 @@ button,
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .catalog__item a:hover,
@@ -1467,6 +1476,10 @@ button,
   line-height: 130%;
   color: #f9fbfd;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .form__field-checkbox:hover label,
@@ -1523,6 +1536,10 @@ input[type=checkbox]:checked + span::after {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .form button:hover,
@@ -1554,14 +1571,23 @@ input[type=checkbox]:checked + span::after {
   margin-right: 100px;
 }
 
-.contacts__map.no-js {
+.no-js.no-webp .contacts__map {
   background-image: url("../img/map.png");
   background-size: 560px 306px;
   background-repeat: no-repeat;
   min-width: 560px;
+  min-height: 306px;
 }
 
-.contacts__map.no-js iframe {
+.no-js.webp .contacts__map {
+  background-image: url("../img/map.webp");
+  background-size: 560px 306px;
+  background-repeat: no-repeat;
+  min-width: 560px;
+  min-height: 306px;
+}
+
+.no-js .contacts__map iframe {
   display: none;
 }
 
@@ -1610,6 +1636,10 @@ input[type=checkbox]:checked + span::after {
   display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contacts__link svg {
@@ -1706,9 +1736,14 @@ input[type=checkbox]:checked + span::after {
   background-image: -webkit-gradient(linear, left top, right top, from(#c6dff6), color-stop(50%, #c6dff6), color-stop(50%, #f9fbfd));
   background-image: -o-linear-gradient(left, #c6dff6, #c6dff6 50%, #f9fbfd 50%);
   background-image: linear-gradient(to right, #c6dff6, #c6dff6 50%, #f9fbfd 50%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
+  vertical-align: auto;
   padding: 5px 0;
   position: relative;
   -webkit-background-clip: text;
@@ -1917,6 +1952,22 @@ input[type=checkbox]:checked + span::after {
 
   .no-webp .booking {
     background-image: url("../img/booking-background@2x.jpg");
+  }
+
+  .no-js.no-webp .contacts__map {
+    background-image: url("../img/map@2x.png");
+    background-size: 560px 306px;
+    background-repeat: no-repeat;
+    min-width: 560px;
+    min-height: 306px;
+  }
+
+  .no-js.webp .contacts__map {
+    background-image: url("../img/map@2x.webp");
+    background-size: 560px 306px;
+    background-repeat: no-repeat;
+    min-width: 560px;
+    min-height: 306px;
   }
 }
 
@@ -2209,9 +2260,16 @@ input[type=checkbox]:checked + span::after {
     margin-right: 30px;
   }
 
-  .contacts__map.no-js {
+  .no-js.no-webp .contacts__map {
     min-width: 324px;
     background-image: url("../img/map-tablet.png");
+    background-size: 324px 335px;
+    background-repeat: no-repeat;
+  }
+
+  .no-js.webp .contacts__map {
+    min-width: 324px;
+    background-image: url("../img/map-tablet.webp");
     background-size: 324px 335px;
     background-repeat: no-repeat;
   }
@@ -2350,6 +2408,20 @@ input[type=checkbox]:checked + span::after {
   .webp .cruise--minion {
     background-image: url("../img/minion-1-tablet@2x.webp");
   }
+
+  .no-js.no-webp .contacts__map {
+    min-width: 324px;
+    background-image: url("../img/map-tablet@2x.png");
+    background-size: 324px 335px;
+    background-repeat: no-repeat;
+  }
+
+  .no-js.webp .contacts__map {
+    min-width: 324px;
+    background-image: url("../img/map-tablet@2x.webp");
+    background-size: 324px 335px;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2396,7 +2468,7 @@ input[type=checkbox]:checked + span::after {
     -ms-flex-pack: start;
     justify-content: flex-start;
     min-height: 100vh;
-    width: 100vw;
+    width: auto;
     margin: 0;
     padding-top: 20px;
     padding-left: 15px;
@@ -2847,10 +2919,19 @@ input[type=checkbox]:checked + span::after {
     padding-bottom: 65px;
   }
 
-  .contacts__map.no-js {
+  .no-js.no-webp .contacts__map {
     min-width: 290px;
     min-height: 316px;
     background-image: url("../img/map-mobile.png");
+    background-size: 290px 316px;
+    background-repeat: no-repeat;
+    margin-right: 0;
+  }
+
+  .no-js.webp .contacts__map {
+    min-width: 290px;
+    min-height: 316px;
+    background-image: url("../img/map-mobile.webp");
     background-size: 290px 316px;
     background-repeat: no-repeat;
     margin-right: 0;
@@ -3028,6 +3109,24 @@ input[type=checkbox]:checked + span::after {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40)), url("../img/minion-1-mobile@2x.webp");
     background-image: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile@2x.webp");
     background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%), url("../img/minion-1-mobile@2x.webp");
+  }
+
+  .no-js.no-webp .contacts__map {
+    min-width: 290px;
+    min-height: 316px;
+    background-image: url("../img/map-mobile@2x.png");
+    background-size: 290px 316px;
+    background-repeat: no-repeat;
+    margin-right: 0;
+  }
+
+  .no-js.webp .contacts__map {
+    min-width: 290px;
+    min-height: 316px;
+    background-image: url("../img/map-mobile@2x.webp");
+    background-size: 290px 316px;
+    background-repeat: no-repeat;
+    margin-right: 0;
   }
 }
 

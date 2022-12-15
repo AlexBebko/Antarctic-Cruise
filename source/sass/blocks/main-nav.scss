@@ -23,6 +23,7 @@
   line-height: 20px;
   color: $color-alice-blue;
   padding-bottom: 5px;
+  user-select: none;
 
   &::after {
     position: absolute;

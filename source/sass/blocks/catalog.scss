@@ -121,6 +121,7 @@
   color: $color-tangaroa;
   box-shadow: 0 0 40px 40px $color-alice-blue inset, 0 0 0 0 $color-alice-blue;
   transition: all 0.2s;
+  user-select: none;
 }
 
 .catalog__item a:hover,
