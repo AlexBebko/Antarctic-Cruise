@@ -2,6 +2,7 @@
   min-height: 530px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 120px;
   padding-bottom: 119px;
 }
@@ -128,7 +129,7 @@
 @media (max-width: $tablet-max-width) {
   .contacts__wrapper {
     min-height: 535px;
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 
@@ -171,7 +172,7 @@
 
   .contacts__details {
     align-self: auto;
-    padding-top: 66px;
+    padding-top: 20px;
   }
 
   .contacts__item span {
@@ -222,6 +223,10 @@
       background-repeat: no-repeat;
       margin-right: 0;
     }
+  }
+
+  .contacts__map {
+    margin-right: 0;
   }
 
   .contacts__map iframe {

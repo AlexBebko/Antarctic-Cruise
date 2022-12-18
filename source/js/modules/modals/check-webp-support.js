@@ -1,9 +1,9 @@
 function checkSupport() {
   const html = document.documentElement;
-  const WebP = new Image();
+  const webp = new Image();
 
-  WebP.onload = WebP.onerror = function () {
-    const isSupported = (WebP.height === 2);
+  webp.onload = webp.onerror = function () {
+    const isSupported = (webp.height === 2);
 
     if (isSupported) {
       if (html.className.indexOf('no-webp') >= 0) {
@@ -13,7 +13,7 @@ function checkSupport() {
       }
     }
   };
-  WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  webp.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 }
 
 export {checkSupport};

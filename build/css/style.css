@@ -807,6 +807,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .main-header__logo {
@@ -821,23 +824,26 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
   margin: 0;
-  margin-top: 7px;
+  margin-top: -5px;
   list-style: none;
 }
 
 .main-nav__item {
-  margin-right: 34px;
+  margin-left: 34px;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.main-nav__item:last-child {
+.main-nav__item:first-child {
   margin-right: 0;
 }
 
@@ -1028,9 +1034,7 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
+  gap: 40px;
   list-style: none;
 }
 
@@ -1320,21 +1324,20 @@ button,
 }
 
 .booking__wrapper {
-  width: 100%;
+  width: 94%;
+  max-width: 1185px;
   min-height: 555px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 60px;
-  padding-right: 60px;
 }
 
 .booking__description-container {
+  max-width: 500px;
   padding-top: 163px;
 }
 
@@ -1357,7 +1360,7 @@ button,
 
 .form {
   width: 403px;
-  height: 455px;
+  min-height: 455px;
   padding: 50px;
   padding-top: 43px;
   background-color: #011c40;
@@ -1384,6 +1387,7 @@ button,
   background-color: #f9fbfd;
   color: #011c40;
   border: none;
+  cursor: text;
 }
 
 .form__field input::-webkit-input-placeholder {
@@ -1563,6 +1567,9 @@ input[type=checkbox]:checked + span::after {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 120px;
   padding-bottom: 119px;
 }
@@ -1691,9 +1698,9 @@ input[type=checkbox]:checked + span::after {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1708,6 +1715,7 @@ input[type=checkbox]:checked + span::after {
 }
 
 .main-footer__logo {
+  min-width: 70px;
   margin-right: 40px;
 }
 
@@ -1715,6 +1723,8 @@ input[type=checkbox]:checked + span::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1794,6 +1804,7 @@ input[type=checkbox]:checked + span::after {
   gap: 27px;
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   list-style: none;
 }
 
@@ -1986,10 +1997,6 @@ input[type=checkbox]:checked + span::after {
     height: 20px;
   }
 
-  .main-nav__list {
-    margin-top: 0;
-  }
-
   .main-nav__link {
     font-weight: 500;
     font-size: 14px;
@@ -1997,11 +2004,11 @@ input[type=checkbox]:checked + span::after {
   }
 
   .main-nav__item {
-    margin-right: 24px;
+    margin-left: 24px;
   }
 
-  .main-nav__item:last-child {
-    margin-right: 0;
+  .main-nav__item:first-child {
+    margin-left: 0;
   }
 
   .intro {
@@ -2252,7 +2259,7 @@ input[type=checkbox]:checked + span::after {
 
   .contacts__wrapper {
     min-height: 535px;
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 
@@ -2283,7 +2290,7 @@ input[type=checkbox]:checked + span::after {
     -ms-flex-item-align: auto;
     -ms-grid-row-align: auto;
     align-self: auto;
-    padding-top: 66px;
+    padding-top: 20px;
   }
 
   .contacts__item span {
@@ -2301,6 +2308,7 @@ input[type=checkbox]:checked + span::after {
   }
 
   .main-footer__logo {
+    min-width: 38px;
     margin-right: 25px;
   }
 
@@ -2319,6 +2327,7 @@ input[type=checkbox]:checked + span::after {
 
   .socials {
     margin-left: -5px;
+    padding-top: 0;
     gap: 22px;
   }
 
@@ -2453,6 +2462,9 @@ input[type=checkbox]:checked + span::after {
 
   .main-header__wrapper {
     padding-top: 20px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .main-header__wrapper.is-opened,
@@ -2565,12 +2577,13 @@ input[type=checkbox]:checked + span::after {
   }
 
   .main-nav__list {
+    margin-top: 0;
     padding-left: 0;
   }
 
   .main-nav__item {
     width: 100%;
-    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 10px;
     -webkit-filter: none;
     filter: none;
@@ -2884,7 +2897,7 @@ input[type=checkbox]:checked + span::after {
 
   .form {
     width: 100%;
-    height: 460px;
+    min-height: 460px;
     padding: 40px 29px;
     padding-top: 33px;
     padding-bottom: 33px;
@@ -2898,7 +2911,7 @@ input[type=checkbox]:checked + span::after {
   .form__field-checkbox {
     padding-left: 28px;
     margin-bottom: 28px;
-    width: 180px;
+    min-width: 180px;
   }
 
   .form__field-checkbox label {
@@ -2934,6 +2947,10 @@ input[type=checkbox]:checked + span::after {
     background-image: url("../img/map-mobile.webp");
     background-size: 290px 316px;
     background-repeat: no-repeat;
+    margin-right: 0;
+  }
+
+  .contacts__map {
     margin-right: 0;
   }
 

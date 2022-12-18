@@ -8,6 +8,7 @@
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .main-header__logo {
@@ -41,6 +42,7 @@
 
   .main-header__wrapper {
     padding-top: 20px;
+    align-items: flex-start;
   }
 
   .main-header__wrapper.is-opened,
