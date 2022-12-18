@@ -110,7 +110,7 @@
   }
 
   .benefits__list {
-    column-gap: 25px;
+    gap: 25px;
   }
 
   .benefits__item {
@@ -171,6 +171,7 @@
   .benefits__list {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 
   .benefits__item {
