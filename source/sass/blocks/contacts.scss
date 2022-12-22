@@ -49,6 +49,7 @@
 
 .contacts__map iframe {
   display: block;
+  border: none;
 }
 
 .contacts__details {
@@ -102,7 +103,7 @@
 
 .contacts__link span {
   color: $color-tangaroa;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .contacts__link:hover svg,

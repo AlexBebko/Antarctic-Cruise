@@ -106,14 +106,23 @@
     color: $color-tangaroa;
   }
 
+  .main-nav__link:hover {
+    color: $color-tangaroa-placeholder;
+
+    &::after {
+      background-color: $color-tangaroa-placeholder;
+    }
+  }
+
   .main-nav__link:focus,
   .main-nav__link:focus-within {
-    color: $color-tangaroa-hover;
+    color: $color-tangaroa-placeholder;
+    // background-color: $color-tangaroa;
   }
 
   .main-nav__link:focus::after,
   .main-nav__link:focus-within::after {
-    background-color: $color-tangaroa-hover;
+    background-color: $color-tangaroa-placeholder;
   }
 
   .main-nav__link:active {

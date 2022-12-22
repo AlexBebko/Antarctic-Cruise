@@ -27,6 +27,7 @@
   background-color: $color-alice-blue;
   color: $color-tangaroa;
   border: none;
+  transition: all 0.3s;
   cursor: text;
 }
 
@@ -49,7 +50,6 @@
 .form__field-checkbox {
   position: relative;
   margin-bottom: 24px;
-  padding-left: 23px;
 }
 
 .form__field-checkbox input {
@@ -81,6 +81,8 @@
 
 .form__field-checkbox label {
   vertical-align: text-top;
+  padding-left: 23px;
+  padding-bottom: 5px;
   font-weight: 400;
   font-size: 10px;
   line-height: 130%;
@@ -136,7 +138,7 @@ input[type="checkbox"]:checked + span {
   color: $color-tangaroa;
   cursor: pointer;
   box-shadow: 0 0 40px 40px $color-alice-blue inset, 0 0 0 0 $color-alice-blue;
-  transition: all 0.2s;
+  transition: all 0.3s;
   user-select: none;
 }
 
@@ -167,13 +169,14 @@ input[type="checkbox"]:checked + span {
   }
 
   .form__field-checkbox {
-    padding-left: 28px;
     margin-bottom: 28px;
     min-width: 180px;
   }
 
   .form__field-checkbox label {
     display: block;
+    padding-left: 28px;
+    padding-bottom: 0;
     line-height: 110%;
   }
 }

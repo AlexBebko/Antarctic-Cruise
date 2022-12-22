@@ -1207,9 +1207,9 @@ button,
   color: #011c40;
   -webkit-box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
   box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1387,6 +1387,9 @@ button,
   background-color: #f9fbfd;
   color: #011c40;
   border: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   cursor: text;
 }
 
@@ -1446,7 +1449,6 @@ button,
 .form__field-checkbox {
   position: relative;
   margin-bottom: 24px;
-  padding-left: 23px;
 }
 
 .form__field-checkbox input {
@@ -1475,6 +1477,8 @@ button,
 
 .form__field-checkbox label {
   vertical-align: text-top;
+  padding-left: 23px;
+  padding-bottom: 5px;
   font-weight: 400;
   font-size: 10px;
   line-height: 130%;
@@ -1537,9 +1541,9 @@ input[type=checkbox]:checked + span::after {
   cursor: pointer;
   -webkit-box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
   box-shadow: 0 0 40px 40px #f9fbfd inset, 0 0 0 0 #f9fbfd;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1600,6 +1604,7 @@ input[type=checkbox]:checked + span::after {
 
 .contacts__map iframe {
   display: block;
+  border: none;
 }
 
 .contacts__details {
@@ -1661,9 +1666,9 @@ input[type=checkbox]:checked + span::after {
 
 .contacts__link span {
   color: #011c40;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .contacts__link:hover svg,
@@ -1808,10 +1813,13 @@ input[type=checkbox]:checked + span::after {
   list-style: none;
 }
 
-.socials__link {
+.socials__link svg {
   fill: #f9fbfd;
   -webkit-box-shadow: 0 0 40px 40px #011c40 inset, 0 0 0 0 #011c40;
   box-shadow: 0 0 40px 40px #011c40 inset, 0 0 0 0 #011c40;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .socials__link:focus,
@@ -2463,10 +2471,18 @@ input[type=checkbox]:checked + span::after {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    margin-left: 15px;
+    background-color: transparent;
+    -webkit-transition: margin-left 500ms ease, background-color 500ms step-start, -webkit-box-shadow 500ms ease;
+    transition: margin-left 500ms ease, background-color 500ms step-start, -webkit-box-shadow 500ms ease;
+    -o-transition: margin-left 500ms ease, box-shadow 500ms ease, background-color 500ms step-start;
+    transition: margin-left 500ms ease, box-shadow 500ms ease, background-color 500ms step-start;
+    transition: margin-left 500ms ease, box-shadow 500ms ease, background-color 500ms step-start, -webkit-box-shadow 500ms ease;
   }
 
   .main-header__wrapper.is-opened,
   .no-js .main-header__wrapper {
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2477,7 +2493,7 @@ input[type=checkbox]:checked + span::after {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    min-height: 100vh;
+    height: 100vh;
     width: auto;
     margin: 0;
     padding-top: 20px;
@@ -2488,6 +2504,7 @@ input[type=checkbox]:checked + span::after {
     color: #011c40;
     -webkit-box-shadow: -35px 0 0 rgba(0, 43, 102, 0.5);
     box-shadow: -35px 0 0 rgba(0, 43, 102, 0.5);
+    overflow-y: auto;
   }
 
   .no-js .main-header__wrapper {
@@ -2495,9 +2512,9 @@ input[type=checkbox]:checked + span::after {
     min-height: -webkit-min-content;
     min-height: -moz-min-content;
     min-height: min-content;
-    max-height: -webkit-max-content;
-    max-height: -moz-max-content;
-    max-height: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 
   .main-header__logo {
@@ -2599,14 +2616,22 @@ input[type=checkbox]:checked + span::after {
     color: #011c40;
   }
 
+  .main-nav__link:hover {
+    color: rgba(1, 28, 64, 0.7);
+  }
+
+  .main-nav__link:hover::after {
+    background-color: rgba(1, 28, 64, 0.7);
+  }
+
   .main-nav__link:focus,
   .main-nav__link:focus-within {
-    color: #344966;
+    color: rgba(1, 28, 64, 0.7);
   }
 
   .main-nav__link:focus::after,
   .main-nav__link:focus-within::after {
-    background-color: #344966;
+    background-color: rgba(1, 28, 64, 0.7);
   }
 
   .main-nav__link:active {
@@ -2750,12 +2775,54 @@ input[type=checkbox]:checked + span::after {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .catalog__ratio-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 143%;
+    margin-bottom: 30px;
+  }
+
+  .catalog__ratio-wrapper:last-child {
+    margin-bottom: 0;
   }
 
   .catalog__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     padding-left: 25px;
     padding-bottom: 18px;
     padding-right: 25px;
+  }
+
+  .catalog__item:hover div,
+  .catalog__item:focus div,
+  .catalog__item:focus-within div {
+    min-height: 79%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  .catalog__item dl:last-of-type {
+    margin-bottom: 13px;
   }
 
   .no-webp .cruise {
@@ -2908,13 +2975,14 @@ input[type=checkbox]:checked + span::after {
   }
 
   .form__field-checkbox {
-    padding-left: 28px;
     margin-bottom: 28px;
     min-width: 180px;
   }
 
   .form__field-checkbox label {
     display: block;
+    padding-left: 28px;
+    padding-bottom: 0;
     line-height: 110%;
   }
 

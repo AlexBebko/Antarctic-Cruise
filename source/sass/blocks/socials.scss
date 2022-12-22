@@ -8,9 +8,10 @@
   list-style: none;
 }
 
-.socials__link {
+.socials__link svg {
   fill: $color-alice-blue;
   box-shadow: 0 0 40px 40px $color-tangaroa inset, 0 0 0 0 $color-tangaroa;
+  transition: all 0.3s ease;
 }
 
 .socials__link:focus,
